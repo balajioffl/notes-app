@@ -1,7 +1,6 @@
 let api = "http://localhost:3000/notes";
 let editId = null;
 
-$(document).ready(function () {
   $("#add-note").click(function () {
     if (editId) {
       updateNote();
@@ -10,7 +9,6 @@ $(document).ready(function () {
     }
   });
   getNotes();
-});
 
 function getNotes() {
   fetch(api)
